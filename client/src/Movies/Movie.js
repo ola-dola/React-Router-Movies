@@ -5,10 +5,10 @@ const Movie = props => {
   // debugger
 
   const [movie, setMovie] = useState();
-  const id = props.params.match.id;
+  const id = props.match.params.id;
 
   useEffect(() => {
-    
+
     axios
       .get(`http://localhost:5000/api/movies/${id}`)
       .then(response => {
